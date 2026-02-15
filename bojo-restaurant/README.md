@@ -96,3 +96,4 @@ Replace the placeholder images from Picsum Photos with your own restaurant photo
 ## License
 
 This project is open source and available under the MIT License.
+# bojo-restaurant
