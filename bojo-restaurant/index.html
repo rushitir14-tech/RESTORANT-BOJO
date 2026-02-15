@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOJO Seafood Restaurant - Fresh Catch Daily</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h1>BOJO 🦞</h1>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link active">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#menu" class="nav-link">Menu</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#gallery" class="nav-link">Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#locations" class="nav-link">Locations</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#hotel" class="nav-link">Hotel</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#track-order" class="nav-link">Track Order</a>
+                </li>
+                <li class="nav-item cart-item">
+                    <a href="#" class="nav-link cart-toggle" id="cartToggle">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 2L6 9H3l3 7h12l3-7h-3l-3-7z"></path>
+                            <line x1="9" y1="22" x2="9" y2="9"></line>
+                            <line x1="15" y1="22" x2="15" y2="9"></line>
+                        </svg>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#admin" class="nav-link" id="adminLink">📋 Orders</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="section active">
+        <div class="hero">
+            <div class="hero-content">
+                <h1>Welcome to BOJO Seafood</h1>
+                <p>Fresh catch from the ocean to your plate - Experience the finest seafood dining by the sea</p>
+                <a href="#menu" class="cta-button nav-link">View Seafood Menu</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2>About BOJO Seafood</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Founded in 2020, BOJO Seafood Restaurant brings the ocean's finest treasures to your table. Our expert seafood chefs combine traditional coastal cooking methods with modern culinary arts to create unforgettable dining experiences.</p>
+                    <p>Located right by the sea, BOJO has become the premier destination for seafood enthusiasts seeking the freshest catch in a warm, ocean-inspired atmosphere. We source our seafood daily from local fishermen and sustainable waters.</p>
+                    <div class="features">
+                        <div class="feature">
+                            <h3>🦐 Fresh Daily Catch</h3>
+                            <p>Straight from ocean to plate</p>
+                        </div>
+                        <div class="feature">
+                            <h3>👨‍🍳 Seafood Experts</h3>
+                            <p>Masters of coastal cuisine</p>
+                        </div>
+                        <div class="feature">
+                            <h3>🌊 Oceanfront Dining</h3>
+                            <p>Sea views with fresh seafood</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="section">
+        <div class="container">
+            <h2>Our Seafood Menu</h2>
+            <div class="menu-categories">
+                <button class="category-btn active" data-category="appetizers">Starters 🦐</button>
+                <button class="category-btn" data-category="mains">Main Catch 🦞</button>
+                <button class="category-btn" data-category="desserts">Desserts 🍰</button>
+                <button class="category-btn" data-category="beverages">Drinks 🍹</button>
+            </div>
+            
+            <div class="menu-items">
+                <!-- Appetizers -->
+                <div class="menu-category active" id="appetizers">
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="https://picsum.photos/seed/shrimp-cocktail1/300/200.jpg" alt="Shrimp Cocktail">
+                        </div>
+                        <div class="menu-item-content">
+                            <h3>Shrimp Cocktail</h3>
+                            <p class="description">Jumbo shrimp with house-made cocktail sauce and lemon</p>
+                            <div class="ingredients">
+                                <strong>Ingredients:</strong> Jumbo shrimp, ketchup, horseradish, lemon juice, Worcestershire sauce, hot sauce, fresh lemon
+                            </div>
+                            <div class="allergens">
+                                <strong>Allergens:</strong> 🦐 Shellfish
+                            </div>
+                            <div class="menu-item-footer">
+                                <span class="price">$14.99</span>
+                                <button class="order-btn" data-item="Shrimp Cocktail" data-price="14.99">Order</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="https://picsum.photos/seed/calamari-fritti1/300/200.jpg" alt="Calamari Fritti">
+                        </div>
+                        <div class="menu-item-content">
+                            <h3>Calamari Fritti</h3>
+                            <p class="description">Crispy fried squid rings with marinara sauce</p>
+                            <div class="ingredients">
+                                <strong>Ingredients:</strong> Fresh squid, flour, cornstarch, salt, pepper, marinara sauce (tomatoes, garlic, basil, olive oil)
+                            </div>
+                            <div class="allergens">
+                                <strong>Allergens:</strong> 🦐 Shellfish, 🌾 Gluten
+                            </div>
+                            <div class="menu-item-footer">
+                                <span class="price">$16.99</span>
+                                <button class="order-btn" data-item="Calamari Fritti" data-price="16.99">Order</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="https://picsum.photos/seed/oysters-half-shell1/300/200.jpg" alt="Oysters on Half Shell">
+                        </div>
+                        <div class="menu-item-content">
+                            <h3>Oysters on Half Shell</h3>
+                            <p class="description">Fresh daily oysters with mignonette sauce</p>
+                            <div class="ingredients">
+                                <strong>Ingredients:</strong> Fresh oysters, champagne vinegar, shallots, black pepper, lemon wedges
+                            </div>
+                            <div class="allergens">
+                                <strong>Allergens:</strong> 🦐 Shellfish
+                            </div>
+                            <div class="menu-item-footer">
+                                <span class="price">$18.99</span>
+                                <button class="order-btn" data-item="Oysters on Half Shell" data-price="18.99">Order</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="https://picsum.photos/seed/crab-cakes1/300/200.jpg" alt="Crab Cakes">
+                        </div>
+                        <div class="menu-item-content">
+                            <h3>Crab Cakes</h3>
+                            <p class="description">Lump crab meat with remoulade sauce</p>
+                            <div class="ingredients">
+                                <strong>Ingredients:</strong> Lump crab meat, breadcrumbs, mayonnaise, mustard, egg, celery, bell pepper, remoulade sauce (mayo, mustard, capers, herbs)
+                            </div>
+                            <div class="allergens">
+                                <strong>Allergens:</strong> 🦐 Shellfish, 🥚 Egg, 🌾 Gluten
+                            </div>
+                            <div class="menu-item-footer">
+                                <span class="price">$15.99</span>
+                                <button class="order-btn" data-item="Crab Cakes" data-price="15.99">Order</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Main Courses -->
+                <div class="menu-category" id="mains">
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="https://picsum.photos/seed/grilled-lobster-tail1/300/200.jpg" alt="Grilled Lobster Tail">
+                        </div>
+                        <div class="menu-item-content">
+                            <h3>Grilled Lobster Tail</h3>
+                            <p class="description">Butter-poached lobster tail with garlic herbs</p>
+                            <div class="ingredients">
+                                <strong>Ingredients:</strong> Lobster tail, butter, garlic, fresh herbs, lemon, white wine, salt, pepper
+                            </div>
+                            <div class="allergens">
+                                <strong>Allergens:</strong> 🦐 Shellfish, 🥛 Dairy
+                            </div>
+                            <div class="menu-item-footer">
+                                <span class="price">$34.99</span>
+                                <button class="order-btn" data-item="Grilled Lobster Tail" data-price="34.99">Order</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="https://picsum.photos/seed/pan-seared-salmon1/300/200.jpg" alt="Pan-Seared Salmon">
+                        </div>
+                        <div class="menu-item-content">
+                            <h3>Pan-Seared Salmon</h3>
+                            <p class="description">Atlantic salmon with lemon butter sauce, seasonal vegetables</p>
+                            <div class="ingredients">
+                                <strong>Ingredients:</strong> Atlantic salmon, butter, lemon, garlic, seasonal vegetables, olive oil, white wine, fresh herbs
+                            </div>
+                            <div class="allergens">
+                                <strong>Allergens:</strong> 🐟 Fish, 🥛 Dairy
+                            </div>
+                            <div class="menu-item-footer">
+                                <span class="price">$26.99</span>
+                                <button class="order-btn" data-item="Pan-Seared Salmon" data-price="26.99">Order</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="https://picsum.photos/seed/seafood-paella1/300/200.jpg" alt="Seafood Paella">
+                        </div>
+                        <div class="menu-item-content">
+                            <h3>Seafood Paella</h3>
+                            <p class="description">Saffron rice with shrimp, mussels, clams, and calamari</p>
+                            <div class="ingredients">
+                                <strong>Ingredients:</strong> Saffron rice, shrimp, mussels, clams, calamari, tomatoes, bell peppers, onions, garlic, olive oil, white wine, saffron, paprika
+                            </div>
+                            <div class="allergens">
+                                <strong>Allergens:</strong> 🦐 Shellfish, 🐟 Fish, 🌾 Gluten
+                            </div>
+                            <div class="menu-item-footer">
+                                <span class="price">$28.99</span>
+                                <button class="order-btn" data-item="Seafood Paella" data-price="28.99">Order</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="https://picsum.photos/seed/grilled-swordfish1/300/200.jpg" alt="Grilled Swordfish">
+                        </div>
+                        <div class="menu-item-content">
+                            <h3>Grilled Swordfish</h3>
+                            <p class="description">Mediterranean seasoned swordfish with roasted vegetables</p>
+                            <div class="ingredients">
+                                <strong>Ingredients:</strong> Swordfish steak, olive oil, lemon, oregano, thyme, garlic, roasted vegetables, capers
+                            </div>
+                            <div class="allergens">
+                                <strong>Allergens:</strong> 🐟 Fish
+                            </div>
+                            <div class="menu-item-footer">
+                                <span class="price">$29.99</span>
+                                <button class="order-btn" data-item="Grilled Swordfish" data-price="29.99">Order</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="https://picsum.photos/seed/crab-linguine1/300/200.jpg" alt="Crab Linguine">
+                        </div>
+                        <div class="menu-item-content">
+                            <h3>Crab Linguine</h3>
+                            <p class="description">Lump crab meat in white wine garlic sauce over pasta</p>
+                            <div class="ingredients">
+                                <strong>Ingredients:</strong> Lump crab meat, linguine pasta, white wine, garlic, butter, cream, parmesan cheese, fresh parsley, red pepper flakes
+                            </div>
+                            <div class="allergens">
+                                <strong>Allergens:</strong> 🦐 Shellfish, 🌾 Gluten, 🥛 Dairy
+                            </div>
+                            <div class="menu-item-footer">
+                                <span class="price">$24.99</span>
+                                <button class="order-btn" data-item="Crab Linguine" data-price="24.99">Order</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Desserts -->
+                <div class="menu-category" id="desserts">
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="https://picsum.photos/seed/key-lime-pie1/300/200.jpg" alt="Key Lime Pie">
+                        </div>
+                        <div class="menu-item-content">
+                            <h3>Key Lime Pie</h3>
+                            <p class="description">Classic coastal pie with graham cracker crust</p>
+                            <div class="ingredients">
+                                <strong>Ingredients:</strong> Key lime juice, sweetened condensed milk, egg yolks, graham cracker crust, butter, whipped cream
+                            </div>
+                            <div class="allergens">
+                                <strong>Allergens:</strong> 🥚 Egg, 🥛 Dairy, 🌾 Gluten
+                            </div>
+                            <div class="menu-item-footer">
+                                <span class="price">$9.99</span>
+                                <button class="order-btn" data-item="Key Lime Pie" data-price="9.99">Order</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="https://picsum.photos/seed/coconut-shrimp1/300/200.jpg" alt="Coconut Shrimp">
+                        </div>
+                        <div class="menu-item-content">
+                            <h3>Coconut Shrimp</h3>
+                            <p class="description">Sweet coconut shrimp with pineapple dipping sauce</p>
+                            <div class="ingredients">
+                                <strong>Ingredients:</strong> Large shrimp, shredded coconut, flour, eggs, pineapple, brown sugar, rum, lime juice, coconut milk
+                            </div>
+                            <div class="allergens">
+                                <strong>Allergens:</strong> 🦐 Shellfish, 🥚 Egg, 🌾 Gluten
+                            </div>
+                            <div class="menu-item-footer">
+                                <span class="price">$12.99</span>
+                                <button class="order-btn" data-item="Coconut Shrimp" data-price="12.99">Order</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="https://picsum.photos/seed/sea-salt-caramel-tart1/300/200.jpg" alt="Sea Salt Caramel Tart">
+                        </div>
+                        <div class="menu-item-content">
+                            <h3>Sea Salt Caramel Tart</h3>
+                            <p class="description">Ocean-inspired caramel dessert with sea salt</p>
+                            <div class="ingredients">
+                                <strong>Ingredients:</strong> Caramel, heavy cream, butter, sea salt, tart shell (flour, butter, sugar), vanilla extract
+                            </div>
+                            <div class="allergens">
+                                <strong>Allergens:</strong> 🥛 Dairy, 🌾 Gluten
+                            </div>
+                            <div class="menu-item-footer">
+                                <span class="price">$8.99</span>
+                                <button class="order-btn" data-item="Sea Salt Caramel Tart" data-price="8.99">Order</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Beverages -->
+                <div class="menu-category" id="beverages">
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="https://picsum.photos/seed/ocean-breeze-cocktail1/300/200.jpg" alt="Ocean Breeze Cocktail">
+                        </div>
+                        <div class="menu-item-content">
+                            <h3>Ocean Breeze Cocktail</h3>
+                            <p class="description">Coconut rum, pineapple, and blue curaçao</p>
+                            <div class="ingredients">
+                                <strong>Ingredients:</strong> Coconut rum, pineapple juice, blue curaçao, cream of coconut, fresh pineapple wedge, maraschino cherry
+                            </div>
+                            <div class="allergens">
+                                <strong>Allergens:</strong> 🥛 Dairy
+                            </div>
+                            <div class="menu-item-footer">
+                                <span class="price">$12.99</span>
+                                <button class="order-btn" data-item="Ocean Breeze Cocktail" data-price="12.99">Order</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="https://picsum.photos/seed/sea-salt-margarita1/300/200.jpg" alt="Sea Salt Margarita">
+                        </div>
+                        <div class="menu-item-content">
+                            <h3>Sea Salt Margarita</h3>
+                            <p class="description">Tequila with lime and sea salt rim</p>
+                            <div class="ingredients">
+                                <strong>Ingredients:</strong> Tequila, fresh lime juice, triple sec, agave nectar, sea salt rim, fresh lime wheel
+                            </div>
+                            <div class="allergens">
+                                <strong>Allergens:</strong> None
+                            </div>
+                            <div class="menu-item-footer">
+                                <span class="price">$11.99</span>
+                                <button class="order-btn" data-item="Sea Salt Margarita" data-price="11.99">Order</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="https://picsum.photos/seed/crab-juice1/300/200.jpg" alt="Crab Juice">
+                        </div>
+                        <div class="menu-item-content">
+                            <h3>Crab Juice</h3>
+                            <p class="description">Fresh pressed fruit blend with coastal herbs</p>
+                            <div class="ingredients">
+                                <strong>Ingredients:</strong> Fresh apple juice, orange juice, pineapple juice, mint, basil, hint of sea salt, fresh berries
+                            </div>
+                            <div class="allergens">
+                                <strong>Allergens:</strong> None
+                            </div>
+                            <div class="menu-item-footer">
+                                <span class="price">$6.99</span>
+                                <button class="order-btn" data-item="Crab Juice" data-price="6.99">Order</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="https://picsum.photos/seed/white-wine-selection1/300/200.jpg" alt="White Wine Selection">
+                        </div>
+                        <div class="menu-item-content">
+                            <h3>White Wine Selection</h3>
+                            <p class="description">Perfect pairings for seafood dishes</p>
+                            <div class="ingredients">
+                                <strong>Ingredients:</strong> Sauvignon Blanc, Pinot Grigio, Chardonnay - all sourced from coastal vineyards
+                            </div>
+                            <div class="allergens">
+                                <strong>Allergens:</strong> 🍷 Sulfites
+                            </div>
+                            <div class="menu-item-footer">
+                                <span class="price">$9.99</span>
+                                <button class="order-btn" data-item="White Wine Selection" data-price="9.99">Order</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="section">
+        <div class="container">
+            <h2>Seafood Gallery 🦞</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://picsum.photos/seed/seafood-restaurant1/400/300.jpg" alt="Seafood Restaurant Interior">
+                    <div class="gallery-overlay">
+                        <h3>Oceanfront Dining</h3>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://picsum.photos/seed/fresh-seafood1/400/300.jpg" alt="Fresh Seafood Display">
+                    <div class="gallery-overlay">
+                        <h3>Fresh Daily Catch</h3>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://picsum.photos/seed/seafood-bar1/400/300.jpg" alt="Seafood Bar">
+                    <div class="gallery-overlay">
+                        <h3>Raw Bar & Oysters</h3>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://picsum.photos/seed/lobster-dish1/400/300.jpg" alt="Lobster Dish">
+                    <div class="gallery-overlay">
+                        <h3>Signature Lobster</h3>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://picsum.photos/seed/ocean-view1/400/300.jpg" alt="Ocean View Dining">
+                    <div class="gallery-overlay">
+                        <h3>Sea View Terrace</h3>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://picsum.photos/seed/seafood-platter1/400/300.jpg" alt="Seafood Platter">
+                    <div class="gallery-overlay">
+                        <h3>Seafood Tower</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Locations Section -->
+    <section id="locations" class="section">
+        <div class="container">
+            <h2>Our Seafood Locations 🌊</h2>
+            <div class="locations-grid">
+                <div class="location-card">
+                    <div class="location-image">
+                        <img src="https://picsum.photos/seed/pier-seafood1/400/250.jpg" alt="Pier Location">
+                    </div>
+                    <div class="location-info">
+                        <h3>Fisherman's Pier</h3>
+                        <p class="address">789 Pier Road<br>Harbor District, HD 11111</p>
+                        <p class="phone">(555) 456-7890</p>
+                        <p class="hours">Daily: 11:00 AM - 11:00 PM</p>
+                        <div class="location-features">
+                            <span class="feature-tag">Dockside Dining</span>
+                            <span class="feature-tag">Fresh Catch</span>
+                            <span class="feature-tag">Sunset Views</span>
+                        </div>
+                        <button class="directions-btn" onclick="openDirections('789 Pier Road, Harbor District, HD 11111')">Get Directions</button>
+                    </div>
+                </div>
+                
+                <div class="location-card">
+                    <div class="location-image">
+                        <img src="https://picsum.photos/seed/waterfront-seafood1/400/250.jpg" alt="Waterfront Location">
+                    </div>
+                    <div class="location-info">
+                        <h3>Waterfront</h3>
+                        <p class="address">456 Harbor View Drive<br>Marina District, MD 67890</p>
+                        <p class="phone">(555) 987-6543</p>
+                        <p class="hours">Daily: 12:00 PM - 10:00 PM</p>
+                        <div class="location-features">
+                            <span class="feature-tag">Ocean View</span>
+                            <span class="feature-tag">Fresh Seafood</span>
+                            <span class="feature-tag">Live Music</span>
+                        </div>
+                        <button class="directions-btn" onclick="openDirections('456 Harbor View Drive, Marina District, MD 67890')">Get Directions</button>
+                    </div>
+                </div>
+                
+                <div class="location-card">
+                    <div class="location-image">
+                        <img src="https://picsum.photos/seed/beach-seafood1/400/250.jpg" alt="Beach Location">
+                    </div>
+                    <div class="location-info">
+                        <h3>Beachside</h3>
+                        <p class="address">321 Coastal Highway<br>Beach Town, BT 22222</p>
+                        <p class="phone">(555) 234-5678</p>
+                        <p class="hours">Daily: 10:00 AM - 12:00 AM</p>
+                        <div class="location-features">
+                            <span class="feature-tag">Beach Access</span>
+                            <span class="feature-tag">Seafood Bar</span>
+                            <span class="feature-tag">Bonfire Dining</span>
+                        </div>
+                        <button class="directions-btn" onclick="openDirections('321 Coastal Highway, Beach Town, BT 22222')">Get Directions</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="map-container">
+                <h3>Find Us on the Map</h3>
+                <div class="map-placeholder">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.2219901290355!2d-74.00369368400567!3d40.71312937933039!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a316bb8b1b7%3A0x4b5c5b5c5b5c5b5c!2s123%20Gourmet%20Street%2C%20New%20York%2C%20NY%2010001!5e0!3m2!1sen!2sus!4v1234567890" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hotel Section -->
+    <section id="hotel" class="section">
+        <div class="container">
+            <h2>BOJO Seaside Hotel</h2>
+            <div class="hotel-content">
+                <div class="hotel-hero">
+                    <div class="hotel-image">
+                        <img src="https://picsum.photos/seed/ocean-hotel/1200/600.jpg" alt="Seaside Hotel">
+                        <div class="hotel-overlay">
+                            <h3>Where Ocean Meets Luxury</h3>
+                            <p>Experience coastal elegance at our beachfront retreat</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hotel-coming-soon">
+                    <div class="coming-soon-card">
+                        <div class="seafood-icon">🦐</div>
+                        <h3>Coming Soon</h3>
+                        <p>Our seaside hotel is currently being crafted to bring you the ultimate oceanfront experience. Imagine waking up to breathtaking sea views, with the freshest seafood just steps away at our renowned restaurant.</p>
+                        
+                        <div class="hotel-features">
+                            <div class="hotel-feature">
+                                <div class="feature-icon">🌊</div>
+                                <h4>Beachfront Access</h4>
+                                <p>Direct access to pristine sandy beaches</p>
+                            </div>
+                            <div class="hotel-feature">
+                                <div class="feature-icon">🦞</div>
+                                <h4>Seafood Dining</h4>
+                                <p>Fresh catch daily at our award-winning restaurant</p>
+                            </div>
+                            <div class="hotel-feature">
+                                <div class="feature-icon">🌅</div>
+                                <h4>Ocean Views</h4>
+                                <p>Panoramic sea views from every room</p>
+                            </div>
+                            <div class="hotel-feature">
+                                <div class="feature-icon">⚓</div>
+                                <h4>Nautical Luxury</h4>
+                                <p>Coastal-inspired elegant accommodations</p>
+                            </div>
+                        </div>
+                        
+                        <div class="coming-soon-cta">
+                            <h4>Be the First to Know</h4>
+                            <p>Join our waitlist for exclusive opening offers and early bird specials</p>
+                            <div class="waitlist-form">
+                                <input type="email" placeholder="Enter your email address" class="waitlist-input">
+                                <button class="cta-button">Join Waitlist</button>
+                            </div>
+                        </div>
+                        
+                        <div class="opening-info">
+                            <div class="info-item">
+                                <span class="info-label">Expected Opening:</span>
+                                <span class="info-value">Summer 2025</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Location:</span>
+                                <span class="info-value">Next to BOJO Restaurant, Waterfront</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Features:</span>
+                                <span class="info-value">50 Luxury Rooms • Spa • Seafood Grill • Beach Club</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Get in Touch</h3>
+                    <p>We'd love to hear from you! Whether you have a question about our menu, want to make a reservation, or need information about private events, our team is here to help.</p>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                </svg>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Phone</h4>
+                                <p>Main: (555) 123-4567<br>Reservations: (555) 123-4568</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                </svg>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Email</h4>
+                                <p>General: info@bojorestaurant.com<br>Events: events@bojorestaurant.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Address</h4>
+                                <p>123 Gourmet Street<br>Culinary District, CD 12345</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <polyline points="12 6 12 12 16 14"></polyline>
+                                </svg>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Hours</h4>
+                                <p>Mon-Thu: 11:00 AM - 10:00 PM<br>Fri-Sun: 11:00 AM - 11:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <h4>Follow Us</h4>
+                        <div class="social-icons">
+                            <a href="#" class="social-icon" aria-label="Facebook">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                                </svg>
+                            </a>
+                            <a href="#" class="social-icon" aria-label="Instagram">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                                </svg>
+                            </a>
+                            <a href="#" class="social-icon" aria-label="Twitter">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3>Send us a Message</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject *</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Select a subject</option>
+                                <option value="reservation">Reservation Inquiry</option>
+                                <option value="catering">Catering & Events</option>
+                                <option value="feedback">Feedback</option>
+                                <option value="employment">Employment</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="newsletter" name="newsletter">
+                                <span class="checkmark"></span>
+                                Subscribe to our newsletter for special offers and updates
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="cta-button">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Modal -->
+    <div id="orderModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Your Order</h2>
+            
+            <div class="order-summary">
+                <div id="orderItems"></div>
+                <div class="order-summary-details">
+                    <div class="summary-row">
+                        <span>Subtotal:</span>
+                        <span id="orderSubtotal">$0.00</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Tax (10%):</span>
+                        <span id="orderTax">$0.00</span>
+                    </div>
+                    <div class="summary-row total">
+                        <strong>Total:</strong>
+                        <strong id="orderTotal">$0.00</strong>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="checkout-section">
+                <h3>Checkout Information</h3>
+                <form id="checkoutForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="customerName">Full Name *</label>
+                            <input type="text" id="customerName" name="customerName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="customerPhone">Phone Number *</label>
+                            <input type="tel" id="customerPhone" name="customerPhone" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="customerEmail">Email Address</label>
+                        <input type="email" id="customerEmail" name="customerEmail">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="orderType">Order Type *</label>
+                        <select id="orderType" name="orderType" required>
+                            <option value="">Select order type</option>
+                            <option value="dine-in">Dine In</option>
+                            <option value="takeout">Takeout</option>
+                            <option value="delivery">Delivery</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group" id="addressGroup" style="display: none;">
+                        <label for="deliveryAddress">Delivery Address</label>
+                        <textarea id="deliveryAddress" name="deliveryAddress" rows="2"></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="orderNotes">Special Instructions</label>
+                        <textarea id="orderNotes" name="orderNotes" rows="2" placeholder="Any special requests or dietary requirements..."></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="paymentMethod">Payment Method *</label>
+                        <select id="paymentMethod" name="paymentMethod" required>
+                            <option value="">Select payment method</option>
+                            <option value="cash">Cash on Delivery/Pickup</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="button" id="clearCart" class="secondary-btn">Clear Cart</button>
+                        <button type="submit" class="cta-button">Confirm Order</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Order Confirmation Modal -->
+    <div id="confirmationModal" class="modal">
+        <div class="modal-content confirmation">
+            <div class="confirmation-header">
+                <div class="success-icon">✓</div>
+                <h2>Order Confirmed!</h2>
+            </div>
+            <div class="confirmation-body">
+                <p>Thank you for your order! We've received your request and will prepare it with care.</p>
+                <div class="order-details">
+                    <h4>Order Details:</h4>
+                    <div id="confirmationOrderDetails"></div>
+                    <div class="confirmation-total">
+                        <strong>Total: $<span id="confirmationTotal">0.00</span></strong>
+                    </div>
+                </div>
+                <div class="estimated-time">
+                    <p><strong>Estimated Time:</strong> <span id="estimatedTime">20-30 minutes</span></p>
+                    <p><strong>Order Number:</strong> <span id="orderNumber">BOJO-0000</span></p>
+                </div>
+            </div>
+            <div class="confirmation-actions">
+                <button id="printReceipt" class="secondary-btn">Print Receipt</button>
+                <button id="closeConfirmation" class="cta-button">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Order Tracking Section -->
+    <section id="track-order" class="section">
+        <div class="container">
+            <h2>🔍 Track Your Order</h2>
+            
+            <div class="tracking-container">
+                <div class="tracking-form">
+                    <h3>Enter Your Order Number</h3>
+                    <p>Find your order status using the order number from your confirmation email or receipt.</p>
+                    
+                    <form id="trackingForm">
+                        <div class="form-group">
+                            <label for="orderNumberInput">Order Number (e.g., BOJO-1234)</label>
+                            <input type="text" id="orderNumberInput" name="orderNumberInput" 
+                                   placeholder="BOJO-1234" required>
+                        </div>
+                        <button type="submit" class="cta-button">Track Order</button>
+                    </form>
+                </div>
+                
+                <div id="trackingResult" class="tracking-result" style="display: none;">
+                    <!-- Tracking results will be displayed here -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Admin Panel Section -->
+    <section id="admin" class="section">
+        <div class="container">
+            <h2>📋 Admin Panel - Order Management</h2>
+            
+            <div class="admin-controls">
+                <div class="stats-container">
+                    <div class="stat-card">
+                        <h3>New Orders</h3>
+                        <span class="stat-number" id="newOrdersCount">0</span>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Preparing</h3>
+                        <span class="stat-number" id="preparingCount">0</span>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Ready</h3>
+                        <span class="stat-number" id="readyCount">0</span>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Completed Today</h3>
+                        <span class="stat-number" id="completedCount">0</span>
+                    </div>
+                </div>
+                
+                <div class="filter-controls">
+                    <button class="filter-btn active" data-filter="all">All Orders</button>
+                    <button class="filter-btn" data-filter="new">New</button>
+                    <button class="filter-btn" data-filter="preparing">Preparing</button>
+                    <button class="filter-btn" data-filter="ready">Ready</button>
+                    <button class="filter-btn" data-filter="completed">Completed</button>
+                    <button id="clearAllOrders" class="secondary-btn">Clear All Orders</button>
+                </div>
+            </div>
+            
+            <div class="orders-container">
+                <div id="ordersList"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>BOJO Restaurant</h3>
+                    <p>123 Gourmet Street<br>Culinary District, CD 12345</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Hours</h3>
+                    <p>Mon-Thu: 11:00 AM - 10:00 PM<br>Fri-Sun: 11:00 AM - 11:00 PM</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>Phone: (555) 123-4567<br>Email: info@bojorestaurant.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 BOJO Restaurant. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
